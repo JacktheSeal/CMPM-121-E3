@@ -49,15 +49,61 @@ nose.setAttribute("stroke-width", "4");
 nose.setAttribute("stroke-linecap", "round");
 face.append(nose);
 
-const mouth = document.createElementNS("http://www.w3.org/2000/svg", "line");
-mouth.setAttribute("x1", "75");
-mouth.setAttribute("y1", "137");
-mouth.setAttribute("x2", "125");
-mouth.setAttribute("y2", "137");
-mouth.setAttribute("stroke", "#302c29");
-mouth.setAttribute("stroke-width", "4");
-mouth.setAttribute("stroke-linecap", "round");
-face.append(mouth);
+const frown = document.createElementNS("http://www.w3.org/2000/svg", "path");
+frown.setAttribute("d", "M 70 140 Q 100 125 130 140");
+frown.setAttribute("fill", "none");
+frown.setAttribute("x2", "15");
+frown.setAttribute("y2", "137");
+frown.setAttribute("stroke", "#302c29");
+frown.setAttribute("stroke-width", "4");
+frown.setAttribute("stroke-linecap", "round");
+face.append(frown);
+
+const defs = document.createElementNS(
+  "http://www.w3.org/2000/svg",
+  "defs",
+);
+
+const sunburn = document.createElementNS(
+  "http://www.w3.org/2000/svg",
+  "linearGradient",
+);
+
+sunburn.setAttribute("id", "sunburn");
+sunburn.setAttribute("x1", "0%");
+sunburn.setAttribute("y1", "0%");
+sunburn.setAttribute("x2", "0%");
+sunburn.setAttribute("y2", "100%");
+
+const sunburnStop1 = document.createElementNS(
+  "http://www.w3.org/2000/svg",
+  "stop",
+);
+sunburnStop1.setAttribute("offset", "0%");
+sunburnStop1.setAttribute("stop-color", "#ffc2b8");
+
+const sunburnStop2 = document.createElementNS(
+  "http://www.w3.org/2000/svg",
+  "stop",
+);
+sunburnStop2.setAttribute("offset", "50%");
+sunburnStop2.setAttribute("stop-color", "#ec4141");
+
+const sunburnStop3 = document.createElementNS(
+  "http://www.w3.org/2000/svg",
+  "stop",
+);
+sunburnStop3.setAttribute("offset", "100%");
+sunburnStop3.setAttribute("stop-color", "#ffc2b8");
+
+sunburn.appendChild(sunburnStop1);
+sunburn.appendChild(sunburnStop2);
+sunburn.appendChild(sunburnStop3);
+
+defs.appendChild(sunburn);
+face.prepend(defs);
+
+head.setAttribute("fill", "url(#sunburn)");
 
 portrait.append(face);
 
