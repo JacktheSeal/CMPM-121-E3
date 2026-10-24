@@ -59,6 +59,36 @@ mouth.setAttribute("stroke-width", "4");
 mouth.setAttribute("stroke-linecap", "round");
 face.append(mouth);
 
+for (let i = 0; i < 300; i++) {
+  const stubble = document.createElementNS(
+    "http://www.w3.org/2000/svg",
+    "rect",
+  );
+  stubble.setAttribute("x", String(60 + Math.random() * 80));
+  stubble.setAttribute("y", String(140 + Math.random() * 40));
+  stubble.setAttribute("width", String(Math.max(2, Math.random() * 4)));
+  stubble.setAttribute("height", String(Math.random() * 10));
+  stubble.setAttribute("rx", String(Math.random() * 4));
+  stubble.setAttribute("ry", String(Math.random() * 4));
+  stubble.setAttribute("fill", "#523311");
+  face.append(stubble);
+}
+
+for (let i = 0; i < 100; i++) {
+  const stubble = document.createElementNS(
+    "http://www.w3.org/2000/svg",
+    "rect",
+  );
+  stubble.setAttribute("x", String(60 + Math.random() * 80));
+  stubble.setAttribute("y", String(115 + Math.random() * 10));
+  stubble.setAttribute("width", String(Math.max(2, Math.random() * 4)));
+  stubble.setAttribute("height", String(Math.random() * 10));
+  stubble.setAttribute("rx", String(Math.random() * 4));
+  stubble.setAttribute("ry", String(Math.random() * 4));
+  stubble.setAttribute("fill", "#523311");
+  face.append(stubble);
+}
+
 portrait.append(face);
 
 spin.addEventListener("click", () => {
