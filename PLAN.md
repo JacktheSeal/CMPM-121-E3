@@ -1,5 +1,16 @@
 # Plan
 
+## CHOSEN AND MERGED BRANCH: B
+
+Ears and Hair with Happy Smile
+
+- I opted to go with the addition of Ears and Hair to the portrait.
+- Although the beard and sunburn were both good options, the beard was not natural looking enough, and I couldn't get the sunburn to look as targeted as I had hoped.
+- Both branches (A and C) also didn't satisfy my goal of a "default portrait". Looking back, they added more uniqueness rather than normality, which was unintended.
+- On the other hand, the addition of ears and hair blended well with the rest of the image while also satisfying it's criteria of adding depth and detail to the character while maintaing the "default" look.
+- Thus, B branch was selected as the new addition to the official portrait.
+- The other features remain available to be further explored and implemented on Branches A and C
+
 ## Branch A - EXPLORED
 
 Beard
