@@ -5,7 +5,7 @@
 Beard
 
 - 100 brown rectangles centered mostly on the chin of the face will give the appearance of a beard.
-- Criteria: Rectangles show up generally in the area of the portrait's chin
+- Criteria: Accurately portrays a tired character
 
 ## Branch B
 
@@ -13,7 +13,7 @@ Ears and Hair
 
 - New images will add distinct ears and hair
 - Images will be drawn to try to fit the style of the portrait
-- Criteria: Fits the scale and style of the original portrait
+- Criteria: Adds depth and detail to character
 
 ## Branch C
 
