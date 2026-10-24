@@ -1,3 +1,9 @@
+// @deno-types="./asset-url.d.ts"
+
+import leftEarURL from "./assets/LeftEar.png?no-inline";
+import rightEarURL from "./assets/RightEar.png?no-inline";
+import hairURL from "./assets/Hair.png?no-inline";
+
 const portrait = document.querySelector<HTMLDivElement>("#portrait")!;
 const spin = document.querySelector<HTMLButtonElement>("#spin")!;
 
@@ -61,10 +67,48 @@ function buildFace() {
   mouth.setAttribute("stroke-width", "4");
   mouth.setAttribute("stroke-linecap", "round");
   face.append(mouth);
+
+  //drawn by me using Paint
+  const leftEar = document.createElementNS(
+    "http://www.w3.org/2000/svg",
+    "image",
+  );
+  leftEar.setAttribute("href", leftEarURL);
+  leftEar.setAttribute("x", "-88");
+  leftEar.setAttribute("y", "0");
+  leftEar.setAttribute("width", "200");
+  leftEar.setAttribute("height", "200");
+  face.append(leftEar);
+
+  //drawn by me using Paint
+  const rightEar = document.createElementNS(
+    "http://www.w3.org/2000/svg",
+    "image",
+  );
+  rightEar.setAttribute("href", rightEarURL);
+  rightEar.setAttribute("x", "74");
+  rightEar.setAttribute("y", "0");
+  rightEar.setAttribute("width", "200");
+  rightEar.setAttribute("height", "200");
+  face.append(rightEar);
+
+  //drawn by me using Paint
+  const hair = document.createElementNS(
+    "http://www.w3.org/2000/svg",
+    "image",
+  );
+  hair.setAttribute("href", hairURL);
+  hair.setAttribute("x", "0");
+  hair.setAttribute("y", "-70");
+  hair.setAttribute("width", "200");
+  hair.setAttribute("height", "200");
+  face.append(hair);
+
   return face;
 }
 
 const face = buildFace();
+
 portrait.append(face);
 
 spin.addEventListener("click", () => {
